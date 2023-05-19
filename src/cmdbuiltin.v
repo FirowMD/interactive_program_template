@@ -71,6 +71,8 @@ fn (mut c CommandHelp) run(args []string) ! {
 			println('Command not found: ${args[0]}')
 			return
 		}
+		println('Command: ${command.name}')
+		println('Aliases: ${command.aliases.join(" ")}\n')
 		command.print_help()
 	}
 }
