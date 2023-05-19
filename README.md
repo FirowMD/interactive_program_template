@@ -28,7 +28,7 @@ mut:
 
 ```v
 fn (mut c CommandHandler) init() {
-    // Put new commands here
+	// Put new commands here
 	c.add_command(CommandEcho{ cmdhandler: &c })
 	c.add_command(CommandQuit{ cmdhandler: &c })
 	c.add_command(CommandHelp{ cmdhandler: &c })
