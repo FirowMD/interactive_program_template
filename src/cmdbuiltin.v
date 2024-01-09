@@ -66,6 +66,7 @@ fn (mut c CommandHelp) run(args []string) ! {
 		for command in commands {
 			println('  ' + command.name + ' - ' + command.description)
 		}
+		println('Type "help <command>" for more information.')
 	} else {
 		mut command := c.cmdhandler.get_command(args[0]) or {
 			println('Command not found: ${args[0]}')
